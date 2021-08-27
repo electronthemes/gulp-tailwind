@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .btn-primary {
+    @apply text-white focus:ring px-3 py-2 bg-red-600 rounded;
+  }
+}

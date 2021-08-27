@@ -106,7 +106,7 @@ function watcher() {
   watch("./src/assets/js/**/*.js", jsPluginsTask);
   watch("./src/assets/js/scripts.js", customJsTask);
   watch("./src/assets/css/*.css", cssPluginTask);
-  watch("./src/assets/scss/**/*.scss", styleTask);
+  watch("./src/assets/scss/**/*.scss", series(styleTask, postcssTask));
   watch("./src/assets/fonts/**", custonFonts);
   watch("./src/assets/video/**", videoTask);
 }
